@@ -32,11 +32,14 @@ if option == "2": #Opcion para trabajar con integración bajo la curva
     while intervalo != 5:
         intervalo_anterior = intervalo
         intervalo = intervalo + 0.4
-        intervalo_final = round(intervalo, 1)
-        x_med = (intervalo_final+intervalo_anterior)/2
-        function = 1/2 * (intervalo_final)*(math.sin(intervalo_final)+1)
+        intervalo = round(intervalo, 1)
+        x_med = (intervalo+intervalo_anterior)/2
+        x_med = round(x_med,1)
+        intervalo_elevado = intervalo**2
+        function = (1/2) * (((intervalo_elevado))*(math.sin(intervalo)+1))
+        function = round(function,8)
         area =0.4*function
-        print("{}   |{}          |{}|{}      ".format(intervalo_final, x_med,function,area))
+        print("{}   |{}        |{}|{}      ".format(intervalo, x_med,function,area))
 
 if option == "3":
     print("======Integration by Trapecio======")
