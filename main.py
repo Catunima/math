@@ -17,8 +17,23 @@ while option != "4":
     if option == "1":
         print("=======Newton Raphson========")
         print("y =1/2(x^2)(sin(x)+1)")
+        print("x(n+1)     |x(n)     |f(x_n)        |f'(x_n)    ")
         valorInicial = 0.5
-        valorEvaluado  = 1/2 * (valorInicial)*(math.sin(valorInicial)+1)
+        equis = 0
+        fx = math.cos(equis) - equis**3
+        f_prime_x = math.sin(equis) -3*equis**2
+        epsilon = 1.8*(10**-10)
+        count = 0
+        NR_inicial = equis-(fx/f_prime_x)
+        error = (NR_inicial-equis)/NR_inicial
+        
+
+
+            
+
+
+
+
         #fuccion
     if option == "2": #Opcion para trabajar con integración bajo la curva
         print("===========Integration under the curve======")
