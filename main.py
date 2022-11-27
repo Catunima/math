@@ -23,7 +23,7 @@ if option == "2": #Opcion para trabajar con integración bajo la curva
     intervalo_anterior = intervalo
     x = 0 #variable de x para la función
     intervalo = intervalo + 0.4
-    x_med = intervalo_anterior+intervalo/2
+    x_med = (intervalo+intervalo_anterior)/2
     
 
     print("x     |x(med)     |f(x)        |Area   ")
