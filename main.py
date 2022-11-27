@@ -20,20 +20,23 @@ if option == "1":
 if option == "2": #Opcion para trabajar con integración bajo la curva
     print("===========Integration under the curve======")
     print("y = 1/2(x^2)(sin(x)+1) de 1 a 5")
+    print()
+    print("x     |x(med)     |f(x)        |Area   ")
     intervalo = 1#variable para el inicio del intervalo
     intervalo_anterior = 0 #variable para el anterior
     x_med = 0.0
     function = 0.0
     area = 0.0
-    intervalo_anterior = intervalo
     x = 0 #variable de x para la función
-    intervalo = intervalo + 0.4
-    x_med = (intervalo+intervalo_anterior)/2
-    function = 1/2 * (intervalo)*(math.sin(intervalo)+1)
-    area =0.4*function
-
-    print("x     |x(med)     |f(x)        |Area   ")
-    print("{}   |{}          |{}|{}      ".format(intervalo, x_med,function,area))
+    
+    while intervalo != 5:
+        intervalo_anterior = intervalo
+        intervalo = intervalo + 0.4
+        intervalo_final = round(intervalo, 1)
+        x_med = (intervalo_final+intervalo_anterior)/2
+        function = 1/2 * (intervalo_final)*(math.sin(intervalo_final)+1)
+        area =0.4*function
+        print("{}   |{}          |{}|{}      ".format(intervalo_final, x_med,function,area))
 
 if option == "3":
     print("======Integration by Trapecio======")
