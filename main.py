@@ -27,6 +27,7 @@ if option == "2": #Opcion para trabajar con integración bajo la curva
     x_med = 0.0
     function = 0.0
     area = 0.0
+    result = 0.0
     x = 0 #variable de x para la función
     
     while intervalo != 5:
@@ -35,12 +36,13 @@ if option == "2": #Opcion para trabajar con integración bajo la curva
         intervalo = round(intervalo, 1)
         x_med = (intervalo+intervalo_anterior)/2
         x_med = round(x_med,1)
-        intervalo_elevado = intervalo**2
-        function = (1/2) * (((intervalo_elevado))*(math.sin(intervalo)+1))
+        intervalo_elevado = x_med**2
+        function = (1/2) * (((intervalo_elevado))*(math.sin(x_med)+1))
         function = round(function,8)
         area =0.4*function
+        result = result +area
         print("{}   |{}        |{}|{}      ".format(intervalo, x_med,function,area))
-
+print("                             |{}".format(result))
 if option == "3":
     print("======Integration by Trapecio======")
     print("ecuacion tal")
