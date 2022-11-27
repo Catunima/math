@@ -16,3 +16,6 @@ if option == "1":
     print("ecuacion tal")
 if option == "2":
     print("Integration under the curve")
+if option == "3":
+    print("Integration by Trapecio")
+    print("ecuacion tal")
