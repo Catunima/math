@@ -35,9 +35,10 @@ if option == "2": #Opcion para trabajar con integración bajo la curva
         intervalo = intervalo + 0.4
         intervalo = round(intervalo, 1)
         x_med = (intervalo+intervalo_anterior)/2
-        x_med = round(x_med,1)
+        x_med = round(x_med,3)
         intervalo_elevado = x_med**2
         function = (1/2) * (((intervalo_elevado))*(math.sin(x_med)+1))
+        #function = (math.cos(x_med))/(intervalo_elevado+1)
         function = round(function,8)
         area =0.4*function
         result = result +area
