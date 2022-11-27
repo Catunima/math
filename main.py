@@ -14,6 +14,7 @@ option = input("Selecciona una opcion > ")#recibir datos
 if option == "1":
     print("=======Newton Raphson========")
     print("ecuacion tal")
+    #fuccion
 if option == "2": #Opcion para trabajar con integración bajo la curva
     print("===========Integration under the curve======")
     print("y = 1/2(x^2)(sin(x)+1) de 1 a 5")
