@@ -9,13 +9,13 @@ print ("1. Newton Raphson")
 print("2. Integration under the curve")
 print("3. Integration by Trapecio")
 
-option = input("Selecciona una opcion > ")#recibir datos
+option = input("Selecciona una opcion")#recibir datos
 
 if option == "1":
-    print("=======Newton Raphson======")
+    print("Newton Raphson")
     print("ecuacion tal")
 if option == "2":
-    print("=====Integration under the curve=====")
+    print("Integration under the curve")
 if option == "3":
-    print("======Integration by Trapecio=====")
+    print("Integration by Trapecio")
     print("ecuacion tal")
