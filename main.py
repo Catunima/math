@@ -3,3 +3,4 @@
 
 
 print("welcome")
+menu = ""#variable para datos
