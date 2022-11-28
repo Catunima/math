@@ -17,20 +17,31 @@ while option != "4":
     if option == "1":
         print("=======Newton Raphson========")
         print("y =cos(x)-x**3")
-        print("x(n+1)     |x(n)     |f(x_n)     |f'(x_n)    ")
+        print("x(n+1)     |x(n)      |f(x_n)     |f'(x_n)     |error")
         valorInicial = 0.5 #valor incial de x que se usara dentro de la funcion
         equis = valorInicial # valor de x para pruebas, funcion PENDIENTEEE*
         fx = math.cos(equis) - equis**3 #funcion fx
-        f_prime_x = math.sin(equis)-3*(equis**2)  # funcion derivda fx
+        f_prime_x = -math.sin(equis)-3*(equis**2)  # funcion derivda fx
         epsilon = 1.8*(10**-10) # comparador de error
         count = 0 # counter de veces que se hace
         NR_inicial = equis-(fx/f_prime_x) #Newton-Rapson
-        error = (NR_inicial-equis)/NR_inicial #calculo del error en ese intervalo
-        print("{}   |{}        |{}|{}      ".format(NR_inicial, valorInicial, fx, f_prime_x))
+        error = abs((NR_inicial-equis)/NR_inicial) #calculo del error en ese intervalo
+        print("{} |{}       |{} |{} |{}      ".format(round(NR_inicial,8), valorInicial, round(fx,8), round(f_prime_x,8),round(error,8)))
+        while error > epsilon:
+            new_x = NR_inicial #los valores de NR seran evaluados en la función
+            fx = math.cos(new_x) - new_x**3 #funcion fx con nueva x
+            f_prime_x = -math.sin(new_x)-3*(new_x**2)  # funcion derivada fx con nueva x
+            NR_inicial = new_x-(fx/f_prime_x)
+            error = abs((NR_inicial-new_x)/NR_inicial)
+            print("{} |{}|{}|{}   |{}      ".format(round(NR_inicial,8), round(new_x,8), round(fx,8), round(f_prime_x,8),round(error,8)))
 
-       
+            
 
 
+
+
+
+    
     
         #fuccion
     if option == "2": #Opcion para trabajar con integración bajo la curva
