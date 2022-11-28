@@ -23,16 +23,16 @@ while option != "4":
         f_prime_x = -math.sin(equis)-3*(equis**2)  # funcion derivda fx
         epsilon = 1.8*(10**-10) # comparador de error
         count = 0 # counter de veces que se hace
-        NR_inicial = equis-(fx/f_prime_x) #Newton-Rapson
-        error = abs((NR_inicial-equis)/NR_inicial) #calculo del error en ese intervalo
-        print("{} |{}       |{} |{} |{}      ".format(round(NR_inicial,8), valorInicial, round(fx,8), round(f_prime_x,8),round(error,8)))
+        nr_inicial = equis-(fx/f_prime_x) #Newton-Rapson
+        error = abs((nr_inicial-equis)/nr_inicial) #calculo del error en ese intervalo
+        print("{} |{}       |{} |{} |{}      ".format(round(nr_inicial,8), valorInicial, round(fx,8), round(f_prime_x,8),round(error,8)))
         while error > epsilon:
-            new_x = NR_inicial #los valores de NR seran evaluados en la función
+            new_x = nr_inicial #los valores de NR seran evaluados en la función
             fx = math.cos(new_x) - new_x**3 #funcion fx con nueva x
             f_prime_x = -math.sin(new_x)-3*(new_x**2)  # funcion derivada fx con nueva x
-            NR_inicial = new_x-(fx/f_prime_x)
-            error = abs((NR_inicial-new_x)/NR_inicial)
-            print("{} |{}|{}|{}   |{}      ".format(round(NR_inicial,8), round(new_x,8), round(fx,8), round(f_prime_x,8),round(error,15)))
+            nr_inicial = new_x-(fx/f_prime_x)
+            error = abs((nr_inicial-new_x)/nr_inicial)
+            print("{} |{}|{}|{}   |{}      ".format(round(nr_inicial,8), round(new_x,8), round(fx,8), round(f_prime_x,8),round(error,15)))
    
     
         #fuccion
