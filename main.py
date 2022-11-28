@@ -5,7 +5,6 @@ import math
 print("welcome")
 menu = ""#variable para datos
 
-
 option = ""
 while option != "4":
     print("selecciona una option")
@@ -33,15 +32,8 @@ while option != "4":
             f_prime_x = -math.sin(new_x)-3*(new_x**2)  # funcion derivada fx con nueva x
             NR_inicial = new_x-(fx/f_prime_x)
             error = abs((NR_inicial-new_x)/NR_inicial)
-            print("{} |{}|{}|{}   |{}      ".format(round(NR_inicial,8), round(new_x,8), round(fx,8), round(f_prime_x,8),round(error,8)))
-
-            
-
-
-
-
-
-    
+            print("{} |{}|{}|{}   |{}      ".format(round(NR_inicial,8), round(new_x,8), round(fx,8), round(f_prime_x,8),round(error,15)))
+   
     
         #fuccion
     if option == "2": #Opcion para trabajar con integración bajo la curva
