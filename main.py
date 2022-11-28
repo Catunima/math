@@ -16,24 +16,22 @@ while option != "4":
     option = input("Selecciona una opcion > ")#recibir datos
     if option == "1":
         print("=======Newton Raphson========")
-        print("y =1/2(x^2)(sin(x)+1)")
-        print("x(n+1)     |x(n)     |f(x_n)        |f'(x_n)    ")
-        valorInicial = 0.5
-        equis = 0
-        fx = math.cos(equis) - equis**3
-        f_prime_x = math.sin(equis) -3*equis**2
-        epsilon = 1.8*(10**-10)
-        count = 0
-        NR_inicial = equis-(fx/f_prime_x)
-        error = (NR_inicial-equis)/NR_inicial
-        
+        print("y =cos(x)-x**3")
+        print("x(n+1)     |x(n)     |f(x_n)     |f'(x_n)    ")
+        valorInicial = 0.5 #valor incial de x que se usara dentro de la funcion
+        equis = valorInicial # valor de x para pruebas, funcion PENDIENTEEE*
+        fx = math.cos(equis) - equis**3 #funcion fx
+        f_prime_x = math.sin(equis)-3*(equis**2)  # funcion derivda fx
+        epsilon = 1.8*(10**-10) # comparador de error
+        count = 0 # counter de veces que se hace
+        NR_inicial = equis-(fx/f_prime_x) #Newton-Rapson
+        error = (NR_inicial-equis)/NR_inicial #calculo del error en ese intervalo
+        print("{}   |{}        |{}|{}      ".format(NR_inicial, valorInicial, fx, f_prime_x))
+
+       
 
 
-            
-
-
-
-
+    
         #fuccion
     if option == "2": #Opcion para trabajar con integración bajo la curva
         print("===========Integration under the curve======")
