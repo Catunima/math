@@ -17,7 +17,14 @@ while option != "4":
         print("=======Newton Raphson========")
         print("y =cos(x)-x**3")
         print("x(n+1)     |x(n)      |f(x_n)     |f'(x_n)     |error")
-        valorInicial = 0.5 #valor incial de x que se usara dentro de la funcion
+        valorInicial = 0
+        fx_ev = 1
+        while fx_ev > 0 and fx_ev  :
+            valor_nearzero  = valorInicial
+            fx_ev = math.cos(valorInicial) - valorInicial**3
+            valorInicial += 0.05
+
+        valorInicial = valor_nearzero #valor incial de x que se usara dentro de la funcion
         equis = valorInicial # valor de x para pruebas, funcion PENDIENTEEE*
         fx = math.cos(equis) - equis**3 #funcion fx
         f_prime_x = -math.sin(equis)-3*(equis**2)  # funcion derivda fx
@@ -26,6 +33,9 @@ while option != "4":
         nr_inicial = equis-(fx/f_prime_x) #Newton-Rapson
         error = abs((nr_inicial-equis)/nr_inicial) #calculo del error en ese intervalo
         print("{} |{}       |{} |{} |{}      ".format(round(nr_inicial,8), valorInicial, round(fx,8), round(f_prime_x,8),round(error,8)))
+
+
+
         while error > epsilon:
             new_x = nr_inicial #los valores de NR seran evaluados en la función
             fx = math.cos(new_x) - new_x**3 #funcion fx con nueva x
