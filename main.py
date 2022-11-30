@@ -62,16 +62,17 @@ while option != "4":
         
         while intervalo != 5:
             intervalo_anterior = intervalo
-            intervalo = intervalo + 0.25
+            intervalo = intervalo + 0.1
             intervalo = round(intervalo, 2)
             x_med = (intervalo+intervalo_anterior)/2
             x_med = round(x_med,3)
 
-            intervalo_elevado = x_med**2
+            intervalo_elevado = x_med**4
             #function = (1/2) * (((intervalo_elevado))*(math.sin(x_med)+1))
-            function = (math.cos(x_med))/(intervalo_elevado+1)
+            #func-tion = (math.cos(x_med))/(intervalo_elevado+1)
+            function = math.log10(intervalo_elevado+(3(x_med**2))-(1/x_med))
             function = round(function,8)
-            area =0.25*function
+            area =0.1*function
             result = result +area
             print("{}   |{}        |{}|{}      ".format(intervalo, x_med,function,area))
         print("                             |{}".format(result))
