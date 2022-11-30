@@ -81,11 +81,13 @@ while option != "4":
         intervalo = 0#variable para el inicio del intervalo
         intervalo_anterior = 0 #variable para el anterior
         #function = 0.92073549
-        function = 1
+        function = 0
         area = 0.0
         result = 0.0
         x = 0 #variable de x para la función
-        
+        intervalo_elevado = intervalo**2
+        function = (math.cos(intervalo))/(intervalo_elevado+1)
+        print("{}   |{}|{}      ".format(intervalo,function,area))
         while intervalo != 5:
             intervalo_anterior = intervalo
             intervalo = intervalo + 0.25
