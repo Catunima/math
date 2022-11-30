@@ -93,7 +93,7 @@ while option != "4":
             function = (1/2) * (((intervalo_elevado))*(math.sin(intervalo)+1))
             #function = (math.cos(x_med))/(intervalo_elevado+1)
             function = round(function,8)
-            area =(0.4*((intervalo-intervalo_anterior)))/2
+            area =0.4*((intervalo+intervalo_anterior)/2)
             result = result +area
             print("{}   |{}|{}      ".format(intervalo,function,area))
         print("                             |{}".format(result))
