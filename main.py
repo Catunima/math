@@ -29,8 +29,8 @@ while option != "4":
         #inicio
         equis = 0 # valor de x para pruebas, funcion PENDIENTEEE*
         #fx = math.cos(equis) - equis**3 #funcion fx
-        fx = math.log(equis**4+3x**2-(1/equis))
-        f_prime_x = -math.sin(equis)-3*(equis**2)  # funcion derivda fx
+        fx = math.log(equis**4+(3*equis**2)-(1/equis))
+        f_prime_x =   (4*equis^5+(6*equis^3)+(1))/(equis^6 + 3*equis^4 -equis)# funcion derivda fx
         epsilon = 1.8*(10**-10) # comparador de error
         count = 0 # counter de veces que se hace
         nr_inicial = equis-(fx/f_prime_x) #Newton-Rapson
