@@ -75,4 +75,26 @@ while option != "4":
         print("                             |{}".format(result))
     if option == "3":
         print("======Integration by Trapecio======")
-        print("ecuacion tal")
+        print("y = 1/2(x^2)(sin(x)+1) de 1 a 5")
+        print()
+        print("x     ||f(x)        |Area   ")
+        intervalo = 1#variable para el inicio del intervalo
+        intervalo_anterior = 0 #variable para el anterior
+        function = 0.0
+        area = 0.0
+        result = 0.0
+        x = 0 #variable de x para la función
+        
+        while intervalo != 5:
+            intervalo_anterior = intervalo
+            intervalo = intervalo + 0.4
+            intervalo = round(intervalo, 1)
+            intervalo_elevado = intervalo**2
+            function = (1/2) * (((intervalo_elevado))*(math.sin(intervalo)+1))
+            #function = (math.cos(x_med))/(intervalo_elevado+1)
+            function = round(function,8)
+            area =(0.4*((intervalo-intervalo_anterior)))/2
+            result = result +area
+            print("{}   |{}|{}      ".format(intervalo,function,area))
+        print("                             |{}".format(result))
+
