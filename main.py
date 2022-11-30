@@ -23,18 +23,19 @@ while option != "4":
             valor_nearzero  = valorInicial
             fx_ev = math.cos(valorInicial) - valorInicial**3
             valorInicial += 0.05
-
+            print(valorInicial,fx_ev)
         valorInicial = valor_nearzero #valor incial de x que se usara dentro de la funcion
-        equis = valorInicial # valor de x para pruebas, funcion PENDIENTEEE*
-        fx = math.cos(equis) - equis**3 #funcion fx
+
+        #inicio
+        equis = 0 # valor de x para pruebas, funcion PENDIENTEEE*
+        #fx = math.cos(equis) - equis**3 #funcion fx
+        fx = math.log(equis**4+3x**2-(1/equis))
         f_prime_x = -math.sin(equis)-3*(equis**2)  # funcion derivda fx
         epsilon = 1.8*(10**-10) # comparador de error
         count = 0 # counter de veces que se hace
         nr_inicial = equis-(fx/f_prime_x) #Newton-Rapson
         error = abs((nr_inicial-equis)/nr_inicial) #calculo del error en ese intervalo
         print("{} |{}       |{} |{} |{}      ".format(round(nr_inicial,8), valorInicial, round(fx,8), round(f_prime_x,8),round(error,8)))
-
-
 
         while error > epsilon:
             new_x = nr_inicial #los valores de NR seran evaluados en la función
@@ -65,6 +66,7 @@ while option != "4":
             intervalo = round(intervalo, 2)
             x_med = (intervalo+intervalo_anterior)/2
             x_med = round(x_med,3)
+
             intervalo_elevado = x_med**2
             #function = (1/2) * (((intervalo_elevado))*(math.sin(x_med)+1))
             function = (math.cos(x_med))/(intervalo_elevado+1)
@@ -86,20 +88,20 @@ while option != "4":
         result = 0.0
         x = 0 #variable de x para la función
         intervalo_elevado = intervalo**2
-        function = (math.cos(intervalo))/(intervalo_elevado+1)
+        function = (math.cos(intervalo))/(intervalo_elevado+1)#funcion a cambiar
         print("{}   |{}|{}      ".format(intervalo,function,area))
         while intervalo != 5:
             intervalo_anterior = intervalo
-            intervalo = intervalo + 0.25
+            intervalo = intervalo + 0.25#cambiar el .25 por el nuevo divisor
             intervalo = round(intervalo, 2)
             intervalo_elevado = intervalo**2
             function_anterior = function
             #function = (1/2) * (((intervalo_elevado))*(math.sin(intervalo)+1))
             
-            function = (math.cos(intervalo))/(intervalo_elevado+1)
+            function = (math.cos(intervalo))/(intervalo_elevado+1)#funcion a cambiar
             
             #function = round(function,8)
-            area =(0.25*(function+function_anterior))/2
+            area =(0.25*(function+function_anterior))/2#cambiar el .25 por el nuevo divisor
             result = result +area
             print("{}   |{}|{}      ".format(intervalo,function,area))
         print("                  |{}".format(result))
