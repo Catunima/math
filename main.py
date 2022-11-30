@@ -80,7 +80,8 @@ while option != "4":
         print("x     ||f(x)        |Area   ")
         intervalo = 0#variable para el inicio del intervalo
         intervalo_anterior = 0 #variable para el anterior
-        function = 0.0
+        #function = 0.92073549
+        function = 1
         area = 0.0
         result = 0.0
         x = 0 #variable de x para la función
@@ -90,12 +91,13 @@ while option != "4":
             intervalo = intervalo + 0.25
             intervalo = round(intervalo, 2)
             intervalo_elevado = intervalo**2
+            function_anterior = function
             #function = (1/2) * (((intervalo_elevado))*(math.sin(intervalo)+1))
             
             function = (math.cos(intervalo))/(intervalo_elevado+1)
-            function_anterior = function
+            
             #function = round(function,8)
-            area =0.25*(function+function_anterior)/2
+            area =(0.25*(function+function_anterior))/2
             result = result +area
             print("{}   |{}|{}      ".format(intervalo,function,area))
         print("                  |{}".format(result))
