@@ -102,3 +102,4 @@ while option != "4":
             print("{}   |{}|{}      ".format(intervalo,function,area))
         print("                  |{}".format(result))
 
+print("Gracias por utilizar nuestro software etc. Michi, richi, Tulio, Alexis y edu.")
