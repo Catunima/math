@@ -81,7 +81,7 @@ while option != "4":
         print("y = 1/2(x^2)(sin(x)+1) de 1 a 5")
         print()
         print("x     ||f(x)        |Area   ")
-        intervalo = 0#variable para el inicio del intervalo
+        intervalo = 1 #variable para el inicio del intervalo
         intervalo_anterior = 0 #variable para el anterior
         #function = 0.92073549
         function = 0
@@ -89,20 +89,25 @@ while option != "4":
         result = 0.0
         x = 0 #variable de x para la función
         intervalo_elevado = intervalo**2
-        function = (math.cos(intervalo))/(intervalo_elevado+1)#funcion a cambiar
+        intervalo_cuarta= intervalo**4
+        #function = (math.cos(intervalo))/(intervalo_elevado+1)
+        # #funcion a cambiar
+        function=math.log10(intervalo_cuarta+(3*intervalo_elevado)-1/intervalo)
+
         print("{}   |{}|{}      ".format(intervalo,function,area))
-        while intervalo != 5:
+        while intervalo != 4:
             intervalo_anterior = intervalo
-            intervalo = intervalo + 0.25#cambiar el .25 por el nuevo divisor
+            intervalo = intervalo + 0.1 #cambiar el .25 por el nuevo divisor
             intervalo = round(intervalo, 2)
+            intervalo_cuarta=intervalo**4
             intervalo_elevado = intervalo**2
             function_anterior = function
             #function = (1/2) * (((intervalo_elevado))*(math.sin(intervalo)+1))
             
-            function = (math.cos(intervalo))/(intervalo_elevado+1)#funcion a cambiar
-            
+            #function = (math.cos(intervalo))/(intervalo_elevado+1)#funcion a cambiar
+            function=math.log10(intervalo_cuarta+(3*intervalo_elevado)-1/intervalo)
             #function = round(function,8)
-            area =(0.25*(function+function_anterior))/2#cambiar el .25 por el nuevo divisor
+            area =(0.1*(function+function_anterior))/2 #cambiar el .25 por el nuevo divisor
             result = result +area
             print("{}   |{}|{}      ".format(intervalo,function,area))
         print("                  |{}".format(result))
