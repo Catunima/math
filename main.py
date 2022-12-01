@@ -71,8 +71,7 @@ while option != "4":
             x_med_elevado = x_med**2
             #function = (1/2) * (((intervalo_elevado))*(math.sin(x_med)+1))
             #func-tion = (math.cos(x_med))/(intervalo_elevado+1)
-            result_paren = intervalo_elevado+(3(x_med_elevado)-1/x_med)
-            function = math.log(result_paren,10)
+            function=math.log10(intervalo_elevado+(3*x_med_elevado)-1/x_med)
             area =0.1*function
             result = result +area
             print("{}   |{}        |{}|{}      ".format(intervalo, x_med,function,area))
