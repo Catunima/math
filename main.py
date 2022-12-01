@@ -52,15 +52,15 @@ while option != "4":
         print("y = 1/2(x^2)(sin(x)+1) de 1 a 5")
         print()
         print("x     |x(med)     |f(x)        |Area   ")
-        intervalo = 0#variable para el inicio del intervalo
-        intervalo_anterior = 0 #variable para el anterior
+        intervalo = 1.0#variable para el inicio del intervalo
+        intervalo_anterior = 0.0 #variable para el anterior
         x_med = 0.0
         function = 0.0
         area = 0.0
         result = 0.0
         x = 0 #variable de x para la función
-        
-        while intervalo != 5:
+        result_paren = 0.0
+        while intervalo != 4:
             intervalo_anterior = intervalo
             intervalo = intervalo + 0.1
             intervalo = round(intervalo, 2)
@@ -68,10 +68,11 @@ while option != "4":
             x_med = round(x_med,3)
 
             intervalo_elevado = x_med**4
+            x_med_elevado = x_med**2
             #function = (1/2) * (((intervalo_elevado))*(math.sin(x_med)+1))
             #func-tion = (math.cos(x_med))/(intervalo_elevado+1)
-            function = math.log10(intervalo_elevado+(3(x_med**2))-(1/x_med))
-            function = round(function,8)
+            result_paren = intervalo_elevado+(3(x_med_elevado)-1/x_med)
+            function = math.log(result_paren,10)
             area =0.1*function
             result = result +area
             print("{}   |{}        |{}|{}      ".format(intervalo, x_med,function,area))
