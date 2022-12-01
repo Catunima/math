@@ -71,7 +71,7 @@ while option != "4":
             x_med_elevado = x_med**2
             #function = (1/2) * (((intervalo_elevado))*(math.sin(x_med)+1))
             #func-tion = (math.cos(x_med))/(intervalo_elevado+1)
-            function=math.log10(intervalo_elevado+(3*x_med_elevado)-1/x_med)
+            function=math.log(intervalo_elevado+(3*x_med_elevado)-1/x_med)
             area =0.1*function
             result = result +area
             print("{}   |{}        |{}|{}      ".format(intervalo, x_med,function,area))
@@ -92,23 +92,24 @@ while option != "4":
         intervalo_cuarta= intervalo**4
         #function = (math.cos(intervalo))/(intervalo_elevado+1)
         # #funcion a cambiar
-        function=math.log10(intervalo_cuarta+(3*intervalo_elevado)-1/intervalo)
+        function=math.log(intervalo*4+(3(intervalo**2))-1/intervalo)
 
         print("{}   |{}|{}      ".format(intervalo,function,area))
         while intervalo != 4:
             intervalo_anterior = intervalo
             intervalo = intervalo + 0.1 #cambiar el .25 por el nuevo divisor
             intervalo = round(intervalo, 2)
-            intervalo_cuarta=intervalo**4
             intervalo_elevado = intervalo**2
+            intervalo_cuarta=intervalo**4
             function_anterior = function
             #function = (1/2) * (((intervalo_elevado))*(math.sin(intervalo)+1))
             
             #function = (math.cos(intervalo))/(intervalo_elevado+1)#funcion a cambiar
-            function=math.log10(intervalo_cuarta+(3*intervalo_elevado)-1/intervalo)
+            function=math.log(intervalo_cuarta+(3*(intervalo_elevado))-1/intervalo)
             #function = round(function,8)
             area =(0.1*(function+function_anterior))/2 #cambiar el .25 por el nuevo divisor
             result = result +area
+
             print("{}   |{}|{}      ".format(intervalo,function,area))
         print("                  |{}".format(result))
 
